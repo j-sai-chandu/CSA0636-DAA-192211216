@@ -1,0 +1,28 @@
+#include<stdio.h>
+int main(){
+	int n;
+	printf("enter the value of n:");
+	scanf("%d",&n);
+	int f=0;
+    int s=1;
+    int a[100];
+    for(int i=0;i<=2*n;i++){
+    	a[i]=f;
+    	int nt=f+s;
+    	f=s;
+    	s=nt;
+	}
+	int se=0;
+	for(int i=0;i<=2*n;i++){
+		if(i%2==0){
+			se=se+a[i];
+		}
+	}
+	printf("sum of all even seies:%d",se);
+}
+/*output:
+enter the value of n:4
+sum of all even seies:33
+--------------------------------
+Process exited after 1.42 seconds with return value 0
+Press any key to continue . . .*/
